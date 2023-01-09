@@ -16,15 +16,9 @@ class MenuItemsModel {
   factory MenuItemsModel.fromMap({required Map<String, dynamic> data}) {
     List<ItemsModel> items = [];
 
-
-        data['items'].forEach((e) {
-
-          items.add(ItemsModel.fromMap(data: e));
-
-        });
-
-
-    // print(items.length);
+    data['items'].forEach((e) {
+      items.add(ItemsModel.fromMap(data: e));
+    });
 
     return MenuItemsModel(
       image: data['image'],

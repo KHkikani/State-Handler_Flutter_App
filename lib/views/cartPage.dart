@@ -1,6 +1,5 @@
 import 'package:fast_food_ordering/providers/cartProvider.dart';
 import 'package:flutter/material.dart';
-import 'package:fast_food_ordering/views/global.dart';
 import 'package:provider/provider.dart';
 
 class cartPage extends StatefulWidget {
@@ -84,7 +83,7 @@ class _cartPageState extends State<cartPage> {
                   ),
                   Column(
                     children: Provider.of<CartProvider>(context).cartList.map(
-                      (e) {
+                          (e) {
                         return Stack(
                           alignment: Alignment.center,
                           children: [
@@ -108,7 +107,7 @@ class _cartPageState extends State<cartPage> {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                  MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Text(
                                       e.name.toString(),
@@ -165,9 +164,9 @@ class _cartPageState extends State<cartPage> {
                                 children: [
                                   Row(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                    CrossAxisAlignment.center,
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     children: [
                                       CircleAvatar(
                                         backgroundImage: AssetImage(e.image),
@@ -181,7 +180,7 @@ class _cartPageState extends State<cartPage> {
                                           // e.selecteditem = quantityList[
                                           // res.items.indexOf(e)];
                                           Provider.of<CartProvider>(context,
-                                                  listen: false)
+                                              listen: false)
                                               .removeFromCart(items: e);
                                           // Navigator.of(context).pop();
                                         },
@@ -206,7 +205,7 @@ class _cartPageState extends State<cartPage> {
                                       width: 175,
                                       child: Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
+                                        MainAxisAlignment.spaceEvenly,
                                         children: [
                                           IconButton(
                                               onPressed: () {
@@ -214,11 +213,11 @@ class _cartPageState extends State<cartPage> {
                                                   setState(() {
                                                     e.selectedItem--;
                                                     Provider.of<CartProvider>(
-                                                            context,
-                                                            listen: false)
+                                                        context,
+                                                        listen: false)
                                                         .changeSelectedItem(
-                                                            item: e,
-                                                            i: e.selectedItem);
+                                                        item: e,
+                                                        i: e.selectedItem);
                                                   });
                                                 }
                                               },
@@ -238,11 +237,11 @@ class _cartPageState extends State<cartPage> {
                                                   e.selectedItem++;
 
                                                   Provider.of<CartProvider>(
-                                                          context,
-                                                          listen: false)
+                                                      context,
+                                                      listen: false)
                                                       .changeSelectedItem(
-                                                          item: e,
-                                                          i: e.selectedItem);
+                                                      item: e,
+                                                      i: e.selectedItem);
 
                                                   // quantityList[
                                                   // res.items.indexOf(e)]++;

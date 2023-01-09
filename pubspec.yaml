@@ -38,6 +38,8 @@ dependencies:
   google_fonts:
   sqflite:
   shared_preferences:
+  firebase_core:
+  cloud_firestore:
 
 dev_dependencies:
   flutter_test:

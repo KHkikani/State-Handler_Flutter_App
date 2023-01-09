@@ -217,10 +217,10 @@ class _DetailsPageState extends State<DetailsPage> {
                 width: 175,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    image:AssetImage(res.image)
-                  )
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image:AssetImage(res.image)
+                    )
                 ),
               ),
             ],

@@ -26,7 +26,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
   @override
   Widget build(BuildContext context) {
     MenuItemsModel res =
-        ModalRoute.of(context)!.settings.arguments as MenuItemsModel;
+    ModalRoute.of(context)!.settings.arguments as MenuItemsModel;
 
     if (start) {
       quantityList.clear();
@@ -113,7 +113,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                   ),
                   Column(
                     children: res.items.map(
-                      (e) {
+                          (e) {
                         return Stack(
                           alignment: Alignment.center,
                           children: [
@@ -137,7 +137,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
+                                  MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Text(
                                       e.name.toString(),
@@ -195,9 +195,9 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                   children: [
                                     Row(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      CrossAxisAlignment.center,
                                       mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceBetween,
                                       children: [
                                         CircleAvatar(
                                           backgroundImage: AssetImage(e.image),
@@ -209,9 +209,9 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                           backgroundColor: Colors.green,
                                           onPressed: () {
                                             e.selectedItem = quantityList[
-                                                res.items.indexOf(e)];
+                                            res.items.indexOf(e)];
                                             Provider.of<CartProvider>(context,
-                                                    listen: false)
+                                                listen: false)
                                                 .addToCart(items: e);
                                             Navigator.of(context).pop();
                                           },
@@ -236,12 +236,12 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                         width: 175,
                                         child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
+                                          MainAxisAlignment.spaceEvenly,
                                           children: [
                                             IconButton(
                                                 onPressed: () {
                                                   if (quantityList[res.items
-                                                          .indexOf(e)] >
+                                                      .indexOf(e)] >
                                                       1) {
                                                     setState(() {
                                                       quantityList[res.items
@@ -262,7 +262,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                                     // print(quantityList[
                                                     //     res.items.indexOf(e)]);
                                                     quantityList[
-                                                        res.items.indexOf(e)]++;
+                                                    res.items.indexOf(e)]++;
                                                     // print(quantityList[
                                                     //     res.items.indexOf(e)]);
                                                   });

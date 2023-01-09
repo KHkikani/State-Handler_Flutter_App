@@ -1,3 +1,4 @@
+import 'package:fast_food_ordering/res/items.dart';
 import 'package:fast_food_ordering/res/menuItems.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+
   Widget build(BuildContext context) {
+    // print(pizzaItems);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -75,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Column(
                     children: MenuItemsModelList.map(
-                      (e) => Stack(
+                          (e) => Stack(
                         alignment: Alignment.center,
                         children: [
                           Container(
